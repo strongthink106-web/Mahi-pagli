@@ -1,0 +1,125 @@
+
+/* The Mahi Edition — slow, cinematic ambient atmosphere */
+:root{
+  --mcin-rose:#c58b99;
+  --mcin-gold:#d8bd94;
+  --mcin-lilac:#bcb0c9;
+  --mcin-sage:#9ba997;
+}
+.mcin-host{position:relative;isolation:isolate}
+.mcin-scene{
+  position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none;
+  contain:paint;isolation:isolate;
+}
+.mcin-scene__wash{
+  position:absolute;inset:-18%;z-index:0;opacity:.95;
+  background:
+    radial-gradient(ellipse at 22% 28%,color-mix(in srgb,var(--mcin-a,var(--mcin-rose)) 23%,transparent),transparent 35%),
+    radial-gradient(ellipse at 77% 68%,color-mix(in srgb,var(--mcin-b,var(--mcin-gold)) 16%,transparent),transparent 37%),
+    radial-gradient(ellipse at 56% 8%,color-mix(in srgb,var(--mcin-c,var(--mcin-lilac)) 11%,transparent),transparent 34%);
+  transform:translate3d(0,0,0);
+  animation:mcin-wash 34s cubic-bezier(.42,0,.25,1) infinite alternate;
+}
+.mcin-scene__orb{
+  position:absolute;z-index:1;width:min(47vw,650px);aspect-ratio:1;border-radius:50%;
+  filter:blur(58px);opacity:.12;mix-blend-mode:screen;
+  transform:translate3d(0,0,0);animation:mcin-float 29s ease-in-out infinite alternate;
+}
+.mcin-scene__orb--rose{
+  top:-28%;left:-18%;
+  background:radial-gradient(circle at 50% 50%,var(--mcin-a,var(--mcin-rose)),transparent 67%);
+}
+.mcin-scene__orb--gold{
+  right:-24%;bottom:-38%;width:min(54vw,730px);
+  background:radial-gradient(circle at 50% 50%,var(--mcin-b,var(--mcin-gold)),transparent 68%);
+  animation-delay:-13s;animation-duration:37s;
+}
+.mcin-scene__canvas{
+  position:absolute;inset:0;z-index:2;display:block;width:100%;height:100%;
+  opacity:.68;mix-blend-mode:screen;
+}
+.mcin-scene__veil{
+  position:absolute;inset:0;z-index:3;
+  background:
+    radial-gradient(ellipse at 50% 45%,transparent 28%,rgba(10,8,14,.12) 100%),
+    linear-gradient(180deg,rgba(10,8,14,.10),transparent 22%,transparent 78%,rgba(10,8,14,.15));
+}
+.mcin-scene:after{
+  content:"";position:absolute;inset:0;z-index:4;pointer-events:none;opacity:.095;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.78' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.34'/%3E%3C/svg%3E");
+  background-size:180px 180px;
+}
+.hero-layout,.hero-bottom,.finale-inner{position:relative;z-index:5}
+.finale-stars{position:absolute;z-index:4}
+.celebration-layer{z-index:6}
+.page-shell>*:not(.mcin-scene){position:relative;z-index:5}
+.mcin-scene[data-mood="wishes"]{--mcin-a:#bcb0c9;--mcin-b:#d8bd94;--mcin-c:#c58b99}
+.mcin-scene[data-mood="letter"]{--mcin-a:#d7a99b;--mcin-b:#e4cda8;--mcin-c:#c58b99}
+.mcin-scene[data-mood="memories"]{--mcin-a:#b7a6c4;--mcin-b:#9ba997;--mcin-c:#d8bd94}
+.mcin-scene[data-mood="garden"]{--mcin-a:#9ba997;--mcin-b:#c58b99;--mcin-c:#d8bd94}
+.mcin-scene[data-mood="cake"]{--mcin-a:#dfbd8c;--mcin-b:#c58b99;--mcin-c:#e8d7bf}
+.mcin-scene[data-mood="finale"]{--mcin-a:#d8bd94;--mcin-b:#dca7b2;--mcin-c:#bcb0c9}
+:root[data-theme="light"] .mcin-scene__wash{opacity:.58}
+:root[data-theme="light"] .mcin-scene__orb{opacity:.075;mix-blend-mode:multiply}
+:root[data-theme="light"] .mcin-scene__canvas{opacity:.38;mix-blend-mode:multiply}
+.mcin-motion-toggle{
+  position:relative;width:42px;min-width:42px;height:42px;padding:0;display:inline-flex;
+  align-items:center;justify-content:center;border:1px solid var(--line);border-radius:50%;
+  color:var(--text);background:transparent;cursor:pointer;transition:background .2s,border-color .2s,transform .2s;
+}
+.mcin-motion-toggle:hover{background:var(--panel);border-color:var(--line2);transform:translateY(-1px)}
+.mcin-toggle-icon{font:20px/1 var(--serif);color:var(--champagne)}
+.mcin-motion-toggle[aria-pressed="true"] .mcin-toggle-icon{text-shadow:0 0 15px color-mix(in srgb,var(--rose) 72%,transparent)}
+.mcin-toggle-label{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.mcin-motion-toggle.mcin-menu-option{
+  width:100%;height:45px;min-width:0;padding:0 10px;margin-top:9px;border-radius:4px;
+  justify-content:space-between;background:transparent;
+}
+.mcin-motion-toggle.mcin-menu-option .mcin-toggle-label{
+  position:static;width:auto;height:auto;margin:0;overflow:visible;clip:auto;
+  font:600 11px var(--bn);color:var(--muted);white-space:normal;
+}
+.mcin-motion-toggle.mcin-menu-option .mcin-toggle-icon{font-size:18px}
+.mcin-motion-toggle:disabled{opacity:.65;cursor:default;transform:none}
+#mcin-page-transition{
+  position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:1;
+  background:
+    radial-gradient(ellipse at 50% 48%,rgba(197,139,153,.18),transparent 46%),
+    linear-gradient(135deg,#17131c,#241b27 55%,#17131c);
+  transition:opacity .78s cubic-bezier(.22,.72,.18,1);
+}
+#mcin-page-transition:after{
+  content:"";position:absolute;inset:0;opacity:.12;
+  background:radial-gradient(circle at 50% 50%,transparent 25%,#08070b 100%);
+}
+body.mcin-ready #mcin-page-transition{opacity:0}
+body.mcin-leaving #mcin-page-transition{opacity:1;transition-duration:.38s}
+@keyframes mcin-wash{
+  0%{transform:translate3d(-2.2%,-1.2%,0) scale(1)}
+  50%{transform:translate3d(1.6%,1.1%,0) scale(1.045)}
+  100%{transform:translate3d(2.4%,-1.8%,0) scale(1.02)}
+}
+@keyframes mcin-float{
+  0%{transform:translate3d(-3%,1%,0) scale(.96)}
+  50%{transform:translate3d(4%,-3%,0) scale(1.05)}
+  100%{transform:translate3d(-1%,4%,0) scale(1.02)}
+}
+html.mcin-motion-off .mcin-scene__wash,
+html.mcin-motion-off .mcin-scene__orb{animation:none!important}
+html.mcin-motion-off .mcin-scene__canvas{display:none}
+html.mcin-motion-off #mcin-page-transition{transition:none}
+@media(max-width:1120px){
+  .cinema-motion-toggle{width:40px;min-width:40px}
+}
+@media(max-width:640px){
+  .mcin-scene__orb{width:82vw;filter:blur(44px);opacity:.09}
+  .mcin-scene__orb--gold{width:90vw}
+  .mcin-scene__canvas{opacity:.48}
+  .mcin-scene:after{opacity:.065}
+  .mcin-motion-toggle.mcin-menu-option{min-height:46px}
+}
+@media(prefers-reduced-motion:reduce){
+  .mcin-scene__wash,.mcin-scene__orb{animation:none!important}
+  .mcin-scene__canvas{display:none}
+  #mcin-page-transition{transition:none}
+}
