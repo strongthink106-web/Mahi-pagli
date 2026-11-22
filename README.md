@@ -23,6 +23,7 @@ A Bengali-first, seven-page birthday keepsake made for Mahi. The experience uses
 - Reduced-motion preference is respected.
 - Mobile controls use comfortable touch sizes.
 - Original inline SVG artwork keeps image weight low.
+- Progressive cross-document View Transitions are enabled only where supported; navigation remains ordinary HTML links in unsupported browsers.
 - Cross-document View Transitions are progressive enhancement only; ordinary document navigation remains the fallback.
 - Google Fonts are optional and have local font fallbacks.
 
