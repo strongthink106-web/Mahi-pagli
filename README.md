@@ -29,12 +29,13 @@ A Bengali-first, seven-page birthday keepsake made for Mahi. The experience uses
 
 ## Publish
 1. Open **Settings → Pages** in this repository.
-2. Under **Build and deployment**, select **GitHub Actions**.
-3. Push a commit to `main` or manually run the deployment workflow from the Actions tab.
-4. Verify the latest **Deploy birthday site to GitHub Pages** workflow run.
-5. Expected URL: `https://strongthink106-web.github.io/Mahi-pagli/`
+2. Under **Build and deployment**, select **Deploy from a branch**.
+3. Choose branch `main` and folder `/(root)`, then save.
+4. GitHub Pages automatically builds and publishes each new commit on `main`.
+5. Verify the latest **pages build and deployment** run in the Actions tab.
+6. Expected URL: `https://strongthink106-web.github.io/Mahi-pagli/`
 
-GitHub Pages needs to be enabled once in repository settings before the default GitHub Actions token can deploy the site.
+The repository's native GitHub Pages deployment has been verified successfully. The redundant custom deployment workflow has been removed to keep publishing to one reliable path.
 
 ## Editing
 Page text is stored in each individual HTML file. Shared styling and behaviour are in:
