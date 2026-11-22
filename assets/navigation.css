@@ -1,0 +1,121 @@
+
+/* Clear, persistent chapter navigation — desktop and mobile */
+.page-dock--pro{
+  width:min(590px,calc(100% - 32px));min-width:0;
+  display:grid;grid-template-columns:68px minmax(118px,1fr) 205px;
+  align-items:center;gap:10px;padding:8px;
+  border:1px solid rgba(224,195,166,.3);border-radius:12px;
+  background:color-mix(in srgb,#251d29 91%,transparent);
+  box-shadow:0 18px 54px rgba(0,0,0,.34),0 2px 10px rgba(0,0,0,.18);
+  -webkit-backdrop-filter:blur(24px);backdrop-filter:blur(24px);
+}
+.page-dock--pro .dock-prev{
+  width:68px;min-width:68px;min-height:56px;height:56px;
+  display:flex;justify-content:center;gap:5px;flex-direction:column;
+  align-items:center;border:1px solid var(--line);border-radius:8px;
+  color:var(--muted);transition:background .2s,border-color .2s,color .2s;
+}
+.page-dock--pro .dock-prev span{font:20px/1 var(--sans);color:var(--roseLight)}
+.page-dock--pro .dock-prev small{font:600 7px var(--bn);letter-spacing:0}
+.page-dock--pro .dock-prev:hover{background:var(--panel2);border-color:var(--line2);color:var(--text)}
+.page-dock--pro .dock-prev.is-disabled{opacity:.32;pointer-events:none}
+.page-dock--pro .page-switch{min-width:0;width:100%}
+.page-dock--pro .page-switch summary{
+  min-height:56px;gap:3px;padding:2px 4px;border-radius:8px;
+  transition:background .2s;cursor:pointer;
+}
+.page-dock--pro .page-switch summary:hover,
+.page-dock--pro .page-switch[open] summary{background:rgba(255,255,255,.045)}
+.page-dock--pro .dock-current-label{
+  color:var(--muted);font:600 7px var(--bn);letter-spacing:.02em;
+}
+.page-dock--pro .dock-count{display:flex;align-items:baseline;gap:4px}
+.page-dock--pro .dock-count b{font:600 16px/1 var(--sans);color:var(--text);letter-spacing:.06em}
+.page-dock--pro .dock-count i{font:500 9px var(--sans);font-style:normal;color:var(--faint)}
+.page-dock--pro .dock-segments{width:100%;max-width:92px;height:3px;display:flex;gap:3px;margin:1px auto 0}
+.page-dock--pro .dock-segments i{display:block;flex:1;border-radius:4px;background:rgba(245,231,226,.16)}
+.page-dock--pro .dock-segments i.is-done{background:linear-gradient(90deg,var(--rose),var(--champagne))}
+.page-dock--pro .dock-all-label{color:var(--champagne);font:600 8px var(--bn)}
+.page-dock--pro .dock-all-label b{font:13px var(--sans);margin-left:4px}
+.page-dock--pro .page-switch-panel{
+  width:min(300px,calc(100vw - 28px));max-height:min(65vh,480px);overflow-y:auto;
+  padding:13px;bottom:calc(100% + 12px);
+  border:1px solid rgba(224,195,166,.28);border-radius:12px;
+  background:color-mix(in srgb,#2a202d 96%,transparent);
+  box-shadow:0 22px 65px rgba(0,0,0,.4);
+}
+.page-dock--pro .page-switch-panel>p{
+  margin:4px 8px 5px;color:var(--champagne);
+  font:700 8px var(--sans);letter-spacing:.16em;
+}
+.page-dock--pro .dock-menu-note{
+  margin:0 8px 10px;color:var(--muted);font:400 10px var(--bn);
+}
+.page-dock--pro .dock-page-link{
+  min-height:44px;padding:9px 10px;display:grid;
+  grid-template-columns:25px 1fr auto;align-items:center;gap:8px;
+  border:1px solid transparent;border-radius:7px;
+  font:500 12px var(--bn);color:var(--muted);
+}
+.page-dock--pro .dock-page-link span{font:600 9px var(--sans);color:var(--champagne)}
+.page-dock--pro .dock-page-link b{font:600 12px var(--bn)}
+.page-dock--pro .dock-page-link small{font:600 7px var(--sans);letter-spacing:.1em;color:var(--roseLight)}
+.page-dock--pro .dock-page-link:hover,
+.page-dock--pro .dock-page-link.is-active{
+  background:rgba(255,255,255,.055);border-color:rgba(224,195,166,.17);color:var(--text);
+}
+.page-dock--pro .dock-next-cta{
+  min-width:0;min-height:56px;padding:0 15px;
+  display:flex;align-items:center;justify-content:space-between;gap:9px;
+  border:1px solid rgba(255,239,219,.42);border-radius:8px;
+  background:linear-gradient(112deg,#c58b99 0%,#d8bd94 100%);
+  color:#211922;box-shadow:0 7px 22px rgba(0,0,0,.17);
+  transition:transform .22s,filter .22s,box-shadow .22s;
+}
+.page-dock--pro .dock-next-cta:hover{
+  transform:translateY(-2px);filter:brightness(1.07);
+  box-shadow:0 11px 27px rgba(0,0,0,.24);
+}
+.page-dock--pro .dock-next-copy{display:flex;flex-direction:column;align-items:flex-start;gap:2px;min-width:0}
+.page-dock--pro .dock-next-copy small{font:600 8px var(--bn);color:rgba(35,25,34,.72)}
+.page-dock--pro .dock-next-copy b{
+  max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+  font:700 13px var(--bn);color:#211922;
+}
+.page-dock--pro .dock-next-arrow{
+  flex:none;width:31px;height:31px;border-radius:50%;
+  display:grid;place-items:center;background:rgba(255,255,255,.28);
+  font:20px/1 var(--sans);color:#211922;
+}
+@media(max-width:640px){
+  .page-dock--pro{
+    width:calc(100% - 16px);bottom:max(8px,env(safe-area-inset-bottom));
+    grid-template-columns:43px minmax(65px,1fr) minmax(132px,46%);
+    gap:7px;padding:6px 7px;border-radius:13px;
+  }
+  .page-dock--pro .dock-prev{width:43px;min-width:43px;height:52px;min-height:52px;border-radius:9px}
+  .page-dock--pro .dock-prev small{display:none}
+  .page-dock--pro .dock-prev span{font-size:19px}
+  .page-dock--pro .page-switch summary{min-height:52px;padding:1px 0;gap:3px}
+  .page-dock--pro .dock-current-label{font-size:6px}
+  .page-dock--pro .dock-count b{font-size:14px}
+  .page-dock--pro .dock-count i{font-size:8px}
+  .page-dock--pro .dock-segments{max-width:72px;height:2px;gap:2px}
+  .page-dock--pro .dock-all-label{font-size:7px}
+  .page-dock--pro .dock-all-label b{font-size:11px}
+  .page-dock--pro .dock-next-cta{min-height:52px;padding:0 9px;gap:5px;border-radius:9px}
+  .page-dock--pro .dock-next-copy small{font-size:7px}
+  .page-dock--pro .dock-next-copy b{font-size:11px}
+  .page-dock--pro .dock-next-arrow{width:27px;height:27px;font-size:18px}
+  .page-dock--pro .page-switch-panel{width:min(300px,calc(100vw - 24px));max-height:62vh}
+}
+@media(max-width:370px){
+  .page-dock--pro{grid-template-columns:38px minmax(57px,1fr) minmax(124px,46%);gap:5px;padding:5px}
+  .page-dock--pro .dock-prev{width:38px;min-width:38px}
+  .page-dock--pro .dock-next-cta{padding:0 7px}
+  .page-dock--pro .dock-next-copy b{font-size:10px}
+}
+@media(prefers-reduced-motion:reduce){
+  .page-dock--pro .dock-prev,.page-dock--pro .dock-next-cta{transition:none}
+  .page-dock--pro .dock-next-cta:hover{transform:none}
+}
