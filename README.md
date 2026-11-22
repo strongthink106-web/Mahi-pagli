@@ -1,28 +1,41 @@
-# For Mahi ✿ — A Little Birthday Universe
+# The Mahi Edition — A Little World of Wonder
 
-A seven-chapter, Bengali-first birthday mini experience made for Mahi.
+A Bengali-first, seven-page birthday keepsake made for Mahi. The experience uses an editorial visual system: warm paper tones, botanical vector artwork, thoughtful typography, clear page navigation and small interactions.
 
-## Chapters
-1. Welcome — a little birthday universe
-2. Wishes — tap the floating balloons to reveal wishes
-3. A letter — a personal birthday note
-4. Little moments — illustrated memory cards
-5. Wish garden — plant flowers with every wish
-6. Birthday cake — blow out the candle
-7. Finale — a confetti celebration
+## Seven real pages
+1. `index.html` — Welcome / opening note
+2. `wishes.html` — Six tap-to-reveal wishes
+3. `letter.html` — A birthday letter
+4. `memories.html` — Three original vector-illustrated keepsakes
+5. `garden.html` — Plant a flower with each tap
+6. `cake.html` — Turn birthday candles off and on
+7. `finale.html` — Final birthday wish and user-triggered celebration
 
-## Publish with GitHub Pages
-1. Open the repository **Settings → Pages**.
-2. Under **Build and deployment**, choose **Deploy from a branch**.
-3. Select branch **main** and folder **/(root)**, then save.
-4. Wait for the Pages deployment to finish. The site address will be shown in the Pages settings.
+## Navigation and themes
+- Each chapter is a separate HTML page, not a hidden panel in one document.
+- Desktop has all seven navigation links. Mobile has an Explore menu and a persistent previous / chapter switcher / next dock.
+- All page changes are ordinary HTML links; primary navigation works without JavaScript.
+- The day/night theme is optional and remembered in the current browser when storage is available.
+- No music, autoplay, backend, database, API key, analytics or form submission.
 
-The site is static and has no server, database, API key, or external form submission. It is designed to work on mobile and desktop. Google Fonts is used for typography; if the network is unavailable, local system fallbacks are used.
+## Accessibility and performance
+- Semantic landmarks, skip link, visible keyboard focus, native links and disclosure control.
+- Reduced-motion preference is respected.
+- Mobile controls use comfortable touch sizes.
+- Original inline SVG artwork keeps image weight low.
+- Cross-document View Transitions are progressive enhancement only; ordinary document navigation remains the fallback.
+- Google Fonts are optional and have local font fallbacks.
 
-## Files
-- `index.html` — page structure and Bengali content
-- `assets/style.css` — responsive visual design and animations
-- `assets/script.js` — chapter navigation and interactions
-- `assets/favicon.svg` — browser icon
+## Publish
+1. Open **Settings → Pages** in this repository.
+2. Under **Build and deployment**, select **GitHub Actions**.
+3. Push a commit to `main` or manually run the deployment workflow from the Actions tab.
+4. Verify the latest **Deploy birthday site to GitHub Pages** workflow run.
+5. Expected URL: `https://strongthink106-web.github.io/Mahi-pagli/`
 
-To change the greeting, edit the text in `index.html`.
+GitHub Pages needs to be enabled once in repository settings before the default GitHub Actions token can deploy the site.
+
+## Editing
+Page text is stored in each individual HTML file. Shared styling and behaviour are in:
+- `assets/app.css`
+- `assets/app.js`
