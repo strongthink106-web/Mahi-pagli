@@ -40,3 +40,9 @@ GitHub Pages needs to be enabled once in repository settings before the default 
 Page text is stored in each individual HTML file. Shared styling and behaviour are in:
 - `assets/app.css`
 - `assets/app.js`
+
+
+## Release notes
+- Replaced the original one-document chapter panels with seven separately addressable HTML pages.
+- Added mobile-first chapter switching, day/night mode, interactive wish cards, a growing garden, candle controls and a finale celebration.
+- Added a pre-deploy validation step and removed the obsolete single-page CSS/JavaScript assets.
