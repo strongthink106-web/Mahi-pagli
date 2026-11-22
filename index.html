@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff4f6">
+  <meta name="description" content="একটি ছোট্ট ওয়েব-উপহার, শুধুই Mahi-র জন্য। শুভ জন্মদিন, Mahi!">
+  <title>For Mahi ✿ — A Little Birthday Universe</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Hind+Siliguri:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/script.js" defer></script>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="floating-petals" aria-hidden="true"><i>✿</i><i>✧</i><i>♡</i><i>✦</i><i>❀</i></div>
+  <header class="topbar">
+    <a class="brand" href="#welcome" aria-label="For Mahi home"><span class="brand-mark">m.</span><span>little universe <b>for Mahi</b></span></a>
+    <div class="chapter-status"><span id="chapter-count">01</span><span class="status-line"></span><span>07</span></div>
+    <button class="sound-toggle" id="sparkle-toggle" type="button" aria-label="Toggle sparkle effects" aria-pressed="true"><span>✧</span><small>sparkles</small></button>
+  </header>
+
+  <main>
+    <section class="chapter active" id="welcome" data-chapter="1" aria-labelledby="welcome-title">
+      <div class="hero-layout">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> A LITTLE SOMETHING, MADE WITH LOVE</p>
+          <p class="date-note">আজকের দিনটা একটু বেশি সুন্দর ✿</p>
+          <h1 id="welcome-title">Hey, <em>Mahi.</em><br>আজ তোমার দিন।</h1>
+          <p class="hero-lead">পৃথিবীর সব সুন্দর জিনিস এক পাশে, আর তোমার হাসিটা আরেক পাশে। আজকের গল্পটা শুধু তোমাকে নিয়েই।</p>
+          <button class="primary-button next-button" type="button" data-next>তোমার সারপ্রাইজ খুলে দেখো <span>↗</span></button>
+          <p class="tiny-note">একটু সময় নিয়ে দেখো — প্রতিটা পাতায় তোমার জন্য কিছু আছে।</p>
+        </div>
+        <div class="hero-art" aria-label="Illustration of a birthday gift, flowers and stars">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="sun-disc"></div><div class="star star-a">✦</div><div class="star star-b">✧</div><div class="star star-c">✳</div>
+          <div class="flower flower-one">✿</div><div class="flower flower-two">❀</div>
+          <div class="gift-box"><div class="gift-ribbon"></div><div class="gift-bow">♡</div></div>
+          <div class="art-caption"><span>01 / 07</span><b>made just for you</b></div>
+        </div>
+      </div>
+      <div class="hero-bottom"><span>SCROLL THROUGH YOUR LITTLE UNIVERSE</span><span class="scroll-arrow">↓</span><span>WITH ALL THE GOOD VIBES</span></div>
+    </section>
+
+    <section class="chapter" id="wishes" data-chapter="2" aria-labelledby="wishes-title">
+      <div class="section-shell balloons-shell">
+        <div class="section-heading">
+          <p class="eyebrow">CHAPTER TWO · A SKY FULL OF WISHES</p>
+          <h2 id="wishes-title">তোমার জন্য<br><em>আকাশভরা</em> শুভকামনা।</h2>
+          <p>একটা করে বেলুনে একটা করে ইচ্ছে। টোকা দাও — তোমার জন্য ছোট্ট বার্তা লুকিয়ে আছে।</p>
+        </div>
+        <div class="balloon-stage" id="balloon-stage">
+          <button class="balloon balloon-pink" type="button" data-message="তোমার প্রতিটি সকাল শুরু হোক নতুন আশায়।"> <span>♡</span></button>
+          <button class="balloon balloon-lilac" type="button" data-message="তোমার স্বপ্নগুলো সাহস করে ছুঁয়ে দেখার মতো বড় হোক।"><span>✧</span></button>
+          <button class="balloon balloon-yellow" type="button" data-message="হাসির কারণ যেন কখনো কমে না যায়।"><span>☼</span></button>
+          <button class="balloon balloon-blue" type="button" data-message="যেখানেই যাও, ভালোবাসা আর শান্তি তোমার সঙ্গী হোক।"><span>✿</span></button>
+          <button class="balloon balloon-coral" type="button" data-message="তুমি যেমন, ঠিক তেমনভাবেই অসাধারণ।"><span>✦</span></button>
+          <div class="message-cloud" id="balloon-message" role="status" aria-live="polite">একটা বেলুন বেছে নাও ✨</div>
+        </div>
+        <p class="hint-line">প্রতিটা বেলুনে তোমার জন্য আলাদা একটা শুভকামনা আছে</p>
+      </div>
+    </section>
+
+    <section class="chapter" id="letter" data-chapter="3" aria-labelledby="letter-title">
+      <div class="section-shell letter-shell">
+        <div class="letter-side">
+          <p class="eyebrow">CHAPTER THREE · A NOTE FROM THE HEART</p>
+          <h2 id="letter-title">একটা ছোট্ট<br><em>চিঠি</em> তোমার নামে।</h2>
+          <p>সব কথা হয়তো মুখে বলা হয় না। তাই কিছু কথা এখানে রেখে দিলাম।</p>
+          <div class="letter-seal">for<br><b>M.</b></div>
+        </div>
+        <article class="letter-card">
+          <div class="letter-top"><span>DEAR MAHI,</span><span>✿</span></div>
+          <p>তোমাকে নিয়ে বড় বড় শব্দ লিখতে চাই না। শুধু বলতে চাই — তোমার নিজের মতো করে থাকা, ছোট ছোট বিষয়ে খুশি হওয়া, আর চারপাশে একটু আলো ছড়িয়ে দেওয়া; এই ব্যাপারগুলো খুব সুন্দর।</p>
+          <p>নতুন একটা বছর তোমার সামনে খুলে যাচ্ছে। ভুল হলে শিখবে, ক্লান্ত হলে বিশ্রাম নেবে, আর মন চাইলে আবার নতুন করে শুরু করবে। নিজের স্বপ্নগুলোর পাশে থেকো।</p>
+          <p>তোমার জীবনে এমন মানুষ, মুহূর্ত আর গল্প আসুক — যেগুলো মনে পড়লে আপনাআপনি হাসি চলে আসে। তুমি ভালো থেকো, নিজের যত্ন নিও।</p>
+          <p class="letter-sign">অনেক শুভকামনা, <span>♡</span></p>
+          <div class="letter-footer">A LITTLE REMINDER: YOU MATTER.</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="chapter" id="memories" data-chapter="4" aria-labelledby="memories-title">
+      <div class="section-shell memories-shell">
+        <div class="section-heading centered">
+          <p class="eyebrow">CHAPTER FOUR · LITTLE MOMENTS, BIG SMILES</p>
+          <h2 id="memories-title">সুন্দর দিনগুলো<br><em>জমিয়ে রাখি।</em></h2>
+          <p>কিছু মুহূর্ত ছবি হয়ে থাকে, কিছু থেকে যায় অনুভূতিতে। এই ছোট্ট গ্যালারিটা তোমার হাসির জন্য।</p>
+        </div>
+        <div class="memory-grid">
+          <article class="memory-card memory-one"><div class="memory-visual"><span class="sun-shape">☼</span><span class="cloud-shape">☁</span><span class="hill h1"></span><span class="hill h2"></span><span class="tiny-heart">♡</span></div><div class="memory-caption"><span>01</span><b>sunshine kind of days</b><small>রোদ্দুরের মতো উজ্জ্বল</small></div></article>
+          <article class="memory-card memory-two"><div class="memory-visual"><span class="big-flower">✿</span><span class="little-flower">✾</span><span class="sparkle s1">✧</span><span class="sparkle s2">✦</span></div><div class="memory-caption"><span>02</span><b>little things, lovely feels</b><small>ছোট্ট জিনিসে বড় আনন্দ</small></div></article>
+          <article class="memory-card memory-three"><div class="memory-visual"><span class="moon">☾</span><span class="moon-star">✦</span><span class="moon-star two">✧</span><span class="night-note">dream<br>softly</span></div><div class="memory-caption"><span>03</span><b>dream a little bigger</b><small>স্বপ্নের কোনো সীমা নেই</small></div></article>
+        </div>
+        <p class="gallery-note">এই জায়গাগুলোতে পরে তোমাদের প্রিয় ছবিও যোগ করা যাবে। আপাতত তিনটি ছোট্ট অনুভূতি রইল।</p>
+      </div>
+    </section>
+
+    <section class="chapter" id="garden" data-chapter="5" aria-labelledby="garden-title">
+      <div class="section-shell garden-shell">
+        <div class="garden-copy">
+          <p class="eyebrow">CHAPTER FIVE · GROW YOUR OWN MAGIC</p>
+          <h2 id="garden-title">একটা ইচ্ছে<br><em>বুনে দাও।</em></h2>
+          <p>মনের মধ্যে একটা সুন্দর ইচ্ছে রাখো, তারপর নিচের বোতামে চাপ দাও। তোমার ছোট্ট বাগানে একটা ফুল ফুটবে।</p>
+          <button class="primary-button" id="plant-button" type="button">আমার ইচ্ছের ফুল ফোটাও <span>✿</span></button>
+          <p class="garden-counter"><b id="flower-count">0</b>টি ফুল ফুটেছে তোমার বাগানে</p>
+        </div>
+        <div class="garden-scene" id="garden-scene" aria-label="A garden where flowers appear when you plant wishes">
+          <div class="garden-sky"><span>☼</span><i>✧</i><i>✦</i></div>
+          <div class="garden-hill"></div><div class="garden-ground"></div>
+          <div class="seed-flower flower-fixed f-a">✿</div><div class="seed-flower flower-fixed f-b">❀</div><div class="seed-flower flower-fixed f-c">✾</div>
+          <div class="garden-message">beautiful things take time<br><b>keep growing, Mahi.</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter" id="cake" data-chapter="6" aria-labelledby="cake-title">
+      <div class="section-shell cake-shell">
+        <div class="section-heading">
+          <p class="eyebrow">CHAPTER SIX · THE SWEETEST PART</p>
+          <h2 id="cake-title">এবার কেকের<br><em>সময়!</em></h2>
+          <p>একটু চোখ বন্ধ করে একটা ইচ্ছে করো। তারপর মোমবাতিটা নিভিয়ে দাও।</p>
+          <button class="primary-button" id="blow-button" type="button">মোমবাতি নেভাও <span>✧</span></button>
+          <p class="cake-feedback" id="cake-feedback" role="status">তোমার ইচ্ছেটা গোপনই থাকুক 🤍</p>
+        </div>
+        <div class="cake-scene">
+          <div class="cake-sparkle sp-one">✦</div><div class="cake-sparkle sp-two">✧</div><div class="cake-sparkle sp-three">✳</div>
+          <div class="candle"><div class="flame" id="flame"></div><div class="wick"></div></div>
+          <div class="cake-top"></div><div class="cake-middle"><span>♡</span><span>✿</span><span>♡</span></div><div class="cake-bottom"></div>
+          <div class="cake-plate"></div>
+          <p class="cake-label">made of sugar &amp; wishes</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter finale" id="finale" data-chapter="7" aria-labelledby="finale-title">
+      <div class="finale-stars" aria-hidden="true"></div>
+      <div class="finale-content">
+        <p class="eyebrow">CHAPTER SEVEN · AND A THOUSAND MORE TO COME</p>
+        <div class="finale-flower">✿</div>
+        <h2 id="finale-title">শুভ জন্মদিন,<br><em>Mahi!</em></h2>
+        <p>তোমার নতুন বছরটা হোক রঙিন, শান্তিময়, আর তোমার নিজের পছন্দের সব সুন্দর জিনিসে ভরা। আজ, কাল, আর প্রতিটি আগামী দিনের জন্য — অনেক অনেক ভালোবাসা ও শুভকামনা।</p>
+        <button class="final-button" id="fireworks-button" type="button">আরেকবার উদযাপন করি <span>✦</span></button>
+        <button class="text-button" id="restart-button" type="button">শুরু থেকে আবার দেখো ↺</button>
+        <div class="final-sign">THIS LITTLE UNIVERSE IS YOURS <span>♡</span></div>
+      </div>
+      <div id="confetti-layer" class="confetti-layer" aria-hidden="true"></div>
+    </section>
+  </main>
+
+  <nav class="chapter-nav" aria-label="Birthday chapters">
+    <button class="nav-arrow" id="prev-button" type="button" aria-label="Previous chapter" disabled>←</button>
+    <div class="chapter-dots">
+      <button class="chapter-dot current" data-go="1" aria-label="Go to chapter 1"></button>
+      <button class="chapter-dot" data-go="2" aria-label="Go to chapter 2"></button>
+      <button class="chapter-dot" data-go="3" aria-label="Go to chapter 3"></button>
+      <button class="chapter-dot" data-go="4" aria-label="Go to chapter 4"></button>
+      <button class="chapter-dot" data-go="5" aria-label="Go to chapter 5"></button>
+      <button class="chapter-dot" data-go="6" aria-label="Go to chapter 6"></button>
+      <button class="chapter-dot" data-go="7" aria-label="Go to chapter 7"></button>
+    </div>
+    <button class="nav-arrow" id="next-button" type="button" aria-label="Next chapter">→</button>
+  </nav>
+  <footer class="site-footer"><span>MADE WITH A LITTLE EXTRA LOVE</span><span>✿</span><span>FOR MAHI, ALWAYS</span></footer>
+  <noscript><p class="noscript">এই ছোট্ট অভিজ্ঞতাটি উপভোগ করতে JavaScript চালু রাখো।</p></noscript>
+</body>
+</html>
