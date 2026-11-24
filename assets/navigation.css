@@ -119,3 +119,8 @@
   .page-dock--pro .dock-prev,.page-dock--pro .dock-next-cta{transition:none}
   .page-dock--pro .dock-next-cta:hover{transform:none}
 }
+
+/* Maisha Love Edition navigation tint */
+.page-dock--pro .dock-next-cta{background:linear-gradient(112deg,#e9a8bc 0%,#f2d1c1 100%);border-color:rgba(255,238,242,.6)}
+.page-dock--pro .dock-segments i.is-done{background:linear-gradient(90deg,#d88da8,#f0c9b0)}
+.page-dock--pro .dock-all-label{color:#f1b8c8}
