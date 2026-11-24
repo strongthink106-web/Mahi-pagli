@@ -123,3 +123,12 @@ html.mcin-motion-off #mcin-page-transition{transition:none}
   .mcin-scene__canvas{display:none}
   #mcin-page-transition{transition:none}
 }
+
+/* Maisha Love Edition atmosphere */
+.mcin-scene[data-mood="home"]{--mcin-a:#e5a0bb;--mcin-b:#f0c9b0;--mcin-c:#c4a8d4}
+.mcin-scene[data-mood="wishes"]{--mcin-a:#d9a0c4;--mcin-b:#f0c9b0;--mcin-c:#c4a8d4}
+.mcin-scene[data-mood="letter"]{--mcin-a:#e5a0bb;--mcin-b:#f3d0c2;--mcin-c:#d4a4b9}
+.mcin-scene[data-mood="memories"]{--mcin-a:#c4a8d4;--mcin-b:#e5a0bb;--mcin-c:#f0c9b0}
+.mcin-scene[data-mood="garden"]{--mcin-a:#a9b79e;--mcin-b:#e5a0bb;--mcin-c:#f0c9b0}
+.mcin-scene[data-mood="cake"]{--mcin-a:#f0c9b0;--mcin-b:#e5a0bb;--mcin-c:#f7dce4}
+.mcin-scene[data-mood="finale"]{--mcin-a:#e5a0bb;--mcin-b:#f0c9b0;--mcin-c:#d8b6df}
