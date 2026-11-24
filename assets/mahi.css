@@ -208,3 +208,48 @@ body[data-page="finale"] .site-footer{background:#17131c;border-color:rgba(245,2
 ::view-transition-old(root){animation:page-old .18s ease both}::view-transition-new(root){animation:page-new .32s var(--ease) both}
 @keyframes page-old{to{opacity:0;transform:translateY(-5px)}}@keyframes page-new{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 @media(prefers-reduced-motion:reduce){::view-transition-old(root),::view-transition-new(root){animation:none}}
+
+/* Maisha Love Edition — rose, blush, plum and warm candlelight */
+:root{
+ --bg:#160f18;--bg2:#211522;--panel:#2a1b2a;--panel2:#39233a;
+ --text:#fff3f1;--muted:#cbb3c2;--faint:#9c8295;
+ --line:rgba(255,225,235,.16);--line2:rgba(255,225,235,.3);
+ --rose:#d88da8;--roseLight:#f1b8c8;--champagne:#f0c9b0;
+ --sage:#a9a58e;--lilac:#c4a8d4;--paper:#fff0eb;--paperInk:#49303f;
+}
+:root[data-theme="light"]{
+ --bg:#f8e9ed;--bg2:#fff3f0;--panel:#f1dce4;--panel2:#ead0dd;
+ --text:#452b3b;--muted:#806779;--faint:#a28a9b;
+ --line:rgba(91,48,72,.15);--line2:rgba(91,48,72,.27);
+ --rose:#b85e83;--roseLight:#c97a97;--champagne:#a77a66;
+ --sage:#788c79;--lilac:#a78bb9;--paper:#fff8f3;--paperInk:#49303f;
+}
+::selection{background:#d88da8;color:#2b1527}
+body:before{
+ background:
+ radial-gradient(ellipse at 12% 12%,rgba(216,141,168,.17),transparent 38%),
+ radial-gradient(ellipse at 88% 85%,rgba(240,201,176,.10),transparent 35%),
+ radial-gradient(ellipse at 50% 48%,rgba(161,99,145,.06),transparent 55%);
+}
+.hero-stage{
+ background:
+ radial-gradient(ellipse at 76% 45%,rgba(193,111,151,.2),transparent 34%),
+ radial-gradient(ellipse at 24% 75%,rgba(240,201,176,.09),transparent 38%),
+ linear-gradient(135deg,#160f18 0%,#281729 50%,#1a101d 100%);
+}
+.hero-stage:after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.42;background:radial-gradient(ellipse at 52% 46%,transparent 24%,rgba(12,6,15,.48) 100%)}
+.hero-art-frame{border-color:rgba(241,184,200,.3);box-shadow:0 35px 100px rgba(0,0,0,.32),0 0 75px rgba(216,141,168,.1)}
+.hero-art-frame img{filter:saturate(1.12) hue-rotate(-5deg)}
+.hero-kicker,.finale-whisper{color:var(--roseLight)}
+.button-ivory{background:linear-gradient(120deg,#f5c8d2,#f1d5c3);color:#3c2034;border-color:rgba(255,240,242,.65);box-shadow:0 10px 32px rgba(216,141,168,.16)}
+.button-ivory:hover{box-shadow:0 14px 38px rgba(216,141,168,.25)}
+.page-dock--pro .dock-next-cta{background:linear-gradient(112deg,#e9a8bc 0%,#f2d1c1 100%);border-color:rgba(255,238,242,.6)}
+.wish-star{border-color:rgba(239,174,198,.25)}
+.wish-star:hover,.wish-star[aria-expanded="true"]{border-color:rgba(241,184,200,.6);box-shadow:0 20px 65px rgba(216,141,168,.14)}
+.wish-centerpiece{color:#f1b8c8;text-shadow:0 0 45px rgba(216,141,168,.42)}
+.wax-seal{background:radial-gradient(circle at 35% 28%,#f5c3d1,#b75f83 68%,#793d63);color:#fff0f4}
+.garden-world{background:radial-gradient(ellipse at 50% 72%,rgba(216,141,168,.23),transparent 58%),linear-gradient(180deg,#23172b,#382239 72%,#1b1722)}
+.garden-glow{background:radial-gradient(circle,rgba(235,157,190,.32),transparent 70%)}
+.finale-stage{background:radial-gradient(ellipse at 75% 48%,rgba(216,141,168,.23),transparent 35%),radial-gradient(ellipse at 22% 85%,rgba(240,201,176,.12),transparent 38%),linear-gradient(135deg,#160f18,#2b192d 58%,#190f1d)}
+.finale-heart{background:radial-gradient(circle at 38% 28%,#f4c2d0,#bd6e91 68%,#70405f);box-shadow:0 0 80px rgba(216,141,168,.25)}
+.site-footer{color:#c6a2b4}
